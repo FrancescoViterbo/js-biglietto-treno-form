@@ -37,7 +37,7 @@ function generaBiglietto(event){
     var prezzo = kilo * 0.21;
     var offer = "Nessuno Sconto";
     
-    if (age === "" || name === ""){
+    if (kilo === "" || name === ""){
         if (errorMsg !== true){
             var errore = document.createElement('h1');
             errore.innerHTML = 'Per favore, riempi tutti i campi prima di cliccare sul tasto "Genera"';
@@ -114,6 +114,10 @@ function generaBiglietto(event){
                 div.appendChild(h2);
                 div.appendChild(parag);
                 ticketContent.appendChild(div);
+            }
+            if (errorMsg === true){
+                errorSection.childNodes[0].remove();
+                errorMsg = false;
             }
         } else {
             if (errorMsg !== true){

@@ -50,6 +50,11 @@ input, select {
     border: 1px solid rgb(184, 0, 107);
 }
 
+input:focus, select:focus {
+    background-color: rgb(61, 7, 25);
+    color: white;
+}
+
 button {
     padding: 0.5rem 1rem;
     margin: 0 1rem;
