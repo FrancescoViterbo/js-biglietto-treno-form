@@ -84,7 +84,7 @@ function generaBiglietto(event){
         
             /* Creo div contenente il nome dell'intestatario del biglietto */
             var titolo = "Carrozza:";
-            var dati = Math.floor(Math.random() * 13);
+            var dati = 1 + Math.floor(Math.random() * 13);
             classe = "";
             creaDettagliBiglietto(titolo, dati, classe);
         
@@ -99,6 +99,9 @@ function generaBiglietto(event){
             var dati = prezzo + "€";
             classe = "";
             creaDettagliBiglietto(titolo, dati, classe);
+
+            ticketContent.className = "gray-boder";
+            ticket.style.paddingBottom = "1rem";
         
             /* Funzione per creare i vari div del biglietto */
             function creaDettagliBiglietto(titolo, dati, classe){
